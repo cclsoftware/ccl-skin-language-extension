@@ -1,5 +1,15 @@
 # Changelog
 
+**0.9.2 (2025-01-17)**
+
+ - add support for the `override` attribute to explicitly override definitions
+ - add support for rgb percent format (`rgb(0%,50%,100%)`)
+ - add support for type `point3d`
+ - fix loading class models on Windows
+ - fix checking definitions for attributes of type `style[]`
+
+-------------------------------------------------------------------
+
 **0.9.1 (2024-07-31)**
 
  - find unqualified names in own skin file when being in a namespace
