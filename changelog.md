@@ -1,5 +1,20 @@
 # Changelog
 
+**0.9.3 (2025-11-26)**
+
+ - fix go to external definition
+ - fix definitions from other namespaces not being suggested
+ - do not show errors for duplicate "definitions" of sized delegates
+ - fix not showing error for styles in the global namespace referenced from a file inside a namespace without leading `/`
+ - fix parsing skin expressions containing decimal numbers
+ - fix autocomplete when typing an `Import` url
+ - do not show errors for undefined variables requested by `defined` or `not.defined` in `switch` statements
+ - fix error squiggle range for styles containing variables
+ - include namespace when resolving `styleselector` values
+ - do not show duplicate definition error for alternative definitions using `<?desktop_platform?>`
+
+-------------------------------------------------------------------
+
 **0.9.2 (2025-01-17)**
 
  - add support for the `override` attribute to explicitly override definitions
