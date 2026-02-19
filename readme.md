@@ -68,15 +68,11 @@ If the XML hover information is not displayed, it might be required to setup the
 As a prerequisite, install Node.js 18 or later (https://nodejs.org/). Then to install all required dependencies, run:
 
 ```
-cd <framework repository>/tools/ccl/skinlanguageextension
+cd source
 npm install
 ```
 
-Developing the extension is done in VS Code itself. In VS Code, open the folder
-
-```
-<framework repository>/tools/ccl/skinlanguageextension
-```
+Developing the extension is done in VS Code itself. Start by opening the `source`folder in VS Code. The following commands assume that the working directory is `source`.
 
 ## Run Options
 
@@ -89,12 +85,12 @@ In the Run and Debug tab of the main toolbar on the left, several configurations
 This runs a script that traverses the whole repository and checks every skin XML file for errors. The result is printed to the console. This script can be used to get an overview over all errors in the repository and when developing the language server it is helpful to compare the output after the changes with the output before in order to catch any newly introduced bugs. Another use case is to run this script as part of the continuous integration. To run the script manually do:
 
 ```
-cd <framework repository>tools/ccl/skinlanguageextension/server/test
+cd server/test
 tsc
 node ../out/test/test/fulldirectorytraverse.js
 ```
 
-Alternatively you can run the continuous integration build `checkskinerrors.js` from within the repository.
+Alternatively you can run the continuous integration build `checkskinerrors.js` from within the root of the repository to check.
 
 ### Debug
 
@@ -129,14 +125,10 @@ The positions are zero based, so using the line number and character VS Code sho
 To build the installable `CCLSkinLanguageSupport.vsix` file, run
 
 ```
-<framework repository>/tools/ccl/skinlanguageextension/scripts/build.sh
+scripts/build.sh
 ```
 
-The build script writes the output extension .vsix package to
-
-```
-<framework repository>/tools/ccl/skinlanguageextension/build
-```
+The build script writes the output extension .vsix package to the `build` folder.
 
 > **Note**
 > 
@@ -149,7 +141,6 @@ The version number can be found in `package.json` in the language server root fo
 To build `checkskinerrors.js` for use in a continuous integration environment, run
 
 ```
-cd <framework repository>/tools/ccl/skinlanguageextension
 npm run ci-build
 ```
 
