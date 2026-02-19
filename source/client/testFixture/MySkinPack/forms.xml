@@ -1,0 +1,16 @@
+<Skin>
+	<Forms>
+		<Form name="MyForm">
+			<define category="primary">
+				<View name="StyleButton"/>
+			</define>
+			<define category="secondary">
+				<View name="StyleButton"/>
+			</define>
+		</Form>
+
+		<Form name="StyleButton">
+			<Button style="My.$category.style"/>
+		</Form>
+	</Forms>
+</Skin>

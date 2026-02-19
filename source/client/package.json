@@ -1,0 +1,24 @@
+{
+	"name": "ccl-skin-language-client",
+	"description": "VSCode part of the language server",
+	"author": "CCL Software Licensing GmbH",
+	"license": "MIT",
+	"version": "0.0.1",
+	"publisher": "cclsoftware",
+	"main": "src/extension.ts",
+	"engines": {
+		"vscode": "^1.88.0"
+	},
+	"dependencies": {
+		"vscode-languageclient": "9.0.1"
+	},
+	"devDependencies": {
+		"@types/vscode": "1.88.0",
+		"@vscode/test-electron": "^2.5.2"
+	},
+	"targets": {
+		"main": {
+			"includeNodeModules": false
+		}
+	}
+}

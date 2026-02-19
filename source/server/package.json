@@ -1,0 +1,14 @@
+{
+	"name": "ccl-skin-language-server",
+	"description": "The actual language server in node.",
+	"version": "1.0.0",
+	"author": "CCL Software Licensing GmbH",
+	"license": "MIT",
+	"engines": {
+		"node": ">=18.18.0"
+	},
+	"dependencies": {
+		"vscode-languageserver": "9.0.1",
+		"vscode-languageserver-textdocument": "1.0.12"
+	}
+}

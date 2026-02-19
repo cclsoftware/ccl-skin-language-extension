@@ -1,0 +1,63 @@
+// A launch configuration that compiles the extension and then opens it inside a new window
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Repository Error Check",
+			"program": "${workspaceFolder}/server/out/test/fulldirectorytraverse.js",
+			"request": "launch",
+			"type": "node",
+			"preLaunchTask": "Build Server Test",
+			"args": ["-ignore", "/testarea/ .framework/"]
+		},
+		{
+			"name": "Launch Client",
+			"type": "extensionHost",
+			"request": "launch",
+			"runtimeExecutable": "${execPath}",
+			"args": ["--extensionDevelopmentPath=${workspaceRoot}"],
+			"outFiles": ["${workspaceRoot}/client/out/*.js"],
+			"preLaunchTask": {
+				"type": "npm",
+				"script": "compile"
+			},
+			"presentation": {
+				"hidden": true
+			}
+		},
+		{
+			"name": "Attach to Server",
+			"type": "node",
+			"request": "attach",
+			"port": 6009,
+			"restart": true,
+			"outFiles": ["${workspaceRoot}/server/out/**/*.js"],
+			"timeout": 30000,
+			"presentation": {
+				"hidden": true
+			}
+		},
+		{
+			"name": "End-to-End Test",
+			"type": "extensionHost",
+			"request": "launch",
+			"runtimeExecutable": "${execPath}",
+			"args": [
+				"--extensionDevelopmentPath=${workspaceRoot}",
+				"--extensionTestsPath=${workspaceRoot}/client/out/test/index",
+				"${workspaceRoot}/client/testFixture"
+			],
+			"outFiles": ["${workspaceRoot}/client/out/test/*.js"],
+			"preLaunchTask": {
+				"type": "npm",
+				"script": "compile"
+			}
+		}
+	],
+	"compounds": [
+		{
+			"name": "Debug",
+			"configurations": ["Launch Client", "Attach to Server"]
+		}
+	]
+}

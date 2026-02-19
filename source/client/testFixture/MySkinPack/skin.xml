@@ -1,0 +1,20 @@
+<Skin>
+	<Imports>
+		<Import url="@TestSkinPack"/>
+	</Imports>
+	<Includes>
+		<Include url="forms.xml"/>
+	</Includes>
+
+	<Resources>
+		<ColorScheme>
+			<ColorScheme.Color color=""/>
+		</ColorScheme>
+	</Resources>
+
+	<Button style="My." />
+
+	<Variant>
+<!--								<ImageView/>-->
+	<
+</Skin>

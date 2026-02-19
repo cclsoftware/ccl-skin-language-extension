@@ -1,5 +1,13 @@
 # Changelog
 
+**0.9.4 (2026-02-19)**
+
+ - fix rename symbol renaming definition twice
+ - also rename symbols in apps when renaming an external symbol inside a skin pack
+ - fix styles defined in the current (non global) namespace not being suggested
+
+-------------------------------------------------------------------
+
 **0.9.3 (2025-11-26)**
 
  - fix go to external definition
